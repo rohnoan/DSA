@@ -73,8 +73,38 @@ best -
     brute - take a temporary array and put all zeroes inside it
             put all elements of temp arr and put in normal arr
             fill the remaining array with 0s
-    better - 
+    better - none
     best - 
         use 2 pointer j-to traverse i-to put zeroes
         if(arr[j]!=0)arr[i]=arr[j] i++
         then put zeroes from i to n-1
+
+7 union of sorted arrays
+    
+    brute - use set and then put it in a array and return
+    better - none
+    best - use two pointer i for a and j for b
+        check if ans.back() isnt equal to the current element if not then
+        pushback whichever is smaller and then increment the pointer
+
+        then make a loop for remaining elements in a and b 
+
+8 missing number
+    brute - for loop from 0-n
+        check if exists
+    better - use hashing
+    best - (n*(n+1))/2-(sum of all el)
+    bestest(LOL)- 
+        xor(^)
+        a^a=0 and 0^a=a
+        xor1=xor(all el till n)
+        xor2=xor(all el in arr)
+        xor1^xor2 is the ans
+
+9 maximum consecutive ones
+    brute - none
+    better - none
+    best - use 2 variables mx and ans
+            everytime u see a one mx++ and ans=mx(ans,mx)
+            if u see a zero mx=0
+            this way you can keep record of the max ones
