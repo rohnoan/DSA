@@ -1,4 +1,4 @@
-Definition: An array is a collection of elements, stored in contiguous memory locations, and accessible using indices.
+Definition : An array is a collection of elements, stored in contiguous memory locations, and accessible using indices.
 Indexing: Elements are accessed using zero-based indexing (e.g., arr[0] for the first element).
 Fixed Size: Arrays have a fixed size defined during declaration (e.g., int arr[5]).
 Homogeneous Elements: All elements in an array must be of the same data type.
@@ -48,5 +48,33 @@ best -
 5 rotate by k places      
     brute - rotate array one place inside a while(k--) loop
                 rotate array one place - take first element temporary
-    better - 
+            take a temp array from 0 to k
+            store 0 to k in temp 
+            then put in array after k elemens using    
+                for(i=d,i< n,i++){
+                    a[i-d]=a[i]
+                }
+            then put in temp 
+            int j=0
+            for(i=k-n;i<n ;i++ ){
+                arr[i]=temp[j]
+                j++  
+            }
+    better - none
     best -
+        int n=nums.size();
+        k = k % n; 
+        reverse(nums.begin(),nums.begin()+n-k);
+        reverse(nums.begin()+n-k,nums.end());
+        reverse(nums.begin(),nums.end());
+
+6 move zeroes to end
+
+    brute - take a temporary array and put all zeroes inside it
+            put all elements of temp arr and put in normal arr
+            fill the remaining array with 0s
+    better - 
+    best - 
+        use 2 pointer j-to traverse i-to put zeroes
+        if(arr[j]!=0)arr[i]=arr[j] i++
+        then put zeroes from i to n-1
