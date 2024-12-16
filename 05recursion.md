@@ -22,4 +22,23 @@ Alternatives: Iterative solutions often use loops and are generally more memory-
 a function 'a' returns to the function 'b' calling them after the function 'a' finishes
 
 what is stack overflow?
+    whenever theres no basecase then the function will call itself infinite times hence run into basecase.
+
+--sequence matters look at q1 and q2
+--solve for one and the others will solve on its own(?)
+
+1 print n to 1
+    cout<< n << " ";
+    if(n==1)return;
+    printTillOne(n-1);
     
+
+2 print 1 to n
+    if(n==0)return;
+    printTillN(n-1);
+    cout<< n <<" ";
+
+3 factorial of n
+    if(n==1)return ans;
+    ans=ans*n;
+    factorial(n-1);
