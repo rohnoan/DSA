@@ -26,7 +26,11 @@ what is stack overflow?
 
 --sequence matters look at q1 and q2
 --solve for one and the others will solve on its own(?)
+INTUITION
+    1.base case 
+    2.one code part which follows one test case
 
+    
 1 print n to 1
     cout<< n << " ";
     if(n==1)return;
@@ -42,3 +46,11 @@ what is stack overflow?
     if(n==1)return ans;
     ans=ans*n;
     factorial(n-1);
+
+4 fibonacci
+    uve to find out fib(n-1)+fib(n-2)
+    so jus call it 
+    if(n<=1)return n;
+    return fib(n-1)+fib(n-2);
+
+5
