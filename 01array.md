@@ -108,3 +108,13 @@ best -
             everytime u see a one mx++ and ans=mx(ans,mx)
             if u see a zero mx=0
             this way you can keep record of the max ones
+    
+10 find the number that appears once
+    brute - 2 nested for loops
+    better - hashing mpp[arr[i]]++
+    best - xor
+            int a=0;
+            for(int i=0;i<nums.size();i++){
+                a=a^nums[i];
+            }
+            return a;
